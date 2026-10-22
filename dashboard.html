@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Estudante | Admissão Fácil</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admissão<span>Fácil</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="dashboard.html" class="active">Painel</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="tutor.html">Tutor IA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <!-- Cabeçalho do Perfil -->
+        <section class="user-header card">
+            <div class="user-info">
+                <div class="avatar">👨‍🎓</div>
+                <div>
+                    <h2>Bem-vindo de volta, <span id="user-name">Estudante</span>!</h2>
+                    <p>Foco no objetivo: Preparação para os Exames de Admissão 2026.</p>
+                </div>
+            </div>
+            <a href="simulados.html" class="btn btn-primary">+ Novo Simulado</a>
+        </section>
+
+        <!-- Resumo de Desempenho (Métricas) -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon">📝</span>
+                <div class="stat-data">
+                    <h3>12</h3>
+                    <p>Simulados Feitos</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🎯</span>
+                <div class="stat-data">
+                    <h3>78%</h3>
+                    <p>Média de Acertos</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <div class="stat-data">
+                    <h3>5 Dias</h3>
+                    <p>Sequência de Estudos</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <div class="stat-data">
+                    <h3>#14</h3>
+                    <p>Posição no Ranking</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdo Principal do Painel -->
+        <div class="dashboard-content">
+            
+            <!-- Coluna Esquerda: Metas e Desempenho por Matéria -->
+            <div class="content-left">
+                
+                <!-- Metas Diárias -->
+                <section class="card">
+                    <h3>🎯 Minhas Metas Diárias</h3>
+                    <ul class="goals-list">
+                        <li class="goal-item completed">
+                            <input type="checkbox" checked disabled>
+                            <span>Resolver 1 simulado de Português (45 min)</span>
+                        </li>
+                        <li class="goal-item">
+                            <input type="checkbox">
+                            <span>Revisar 5 questões erradas em Matemática</span>
+                        </li>
+                        <li class="goal-item">
+                            <input type="checkbox">
+                            <span>Tirar 1 dúvida no Tutor IA</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Desempenho por Disciplina -->
+                <section class="card">
+                    <h3>📚 Desempenho por Disciplina</h3>
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Português</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar"><div class="fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Matemática</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-bar"><div class="fill" style="width: 65%;"></div></div>
+                    </div>
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Biologia</span>
+                            <span>72%</span>
+                        </div>
+                        <div class="progress-bar"><div class="fill" style="width: 72%;"></div></div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Coluna Direita: Ranking Nacional -->
+            <div class="content-right">
+                <section class="card">
+                    <h3>🏆 Ranking Nacional Moçambique</h3>
+                    <p class="subtitle">Os estudantes mais bem colocados nesta semana</p>
+                    
+                    <ol class="ranking-list">
+                        <li class="ranking-item rank-1">
+                            <span class="pos">1º</span>
+                            <span class="name">Mateus Mulhovo</span>
+                            <span class="points">96%</span>
+                        </li>
+                        <li class="ranking-item rank-2">
+                            <span class="pos">2º</span>
+                            <span class="name">Amina Said</span>
+                            <span class="points">94%</span>
+                        </li>
+                        <li class="ranking-item rank-3">
+                            <span class="pos">3º</span>
+                            <span class="name">Celso Tembe</span>
+                            <span class="points">91%</span>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="pos">4º</span>
+                            <span class="name">Yara Mabote</span>
+                            <span class="points">88%</span>
+                        </li>
+                        <li class="ranking-item me">
+                            <span class="pos">14º</span>
+                            <span class="name">Você</span>
+                            <span class="points">78%</span>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Admissão Fácil — Projeto Jovem Criativo de Moçambique.</p>
+    </footer>
+
+    <!-- Adicionar no final do dashboard.html -->
+    <script src="../js/auth.js"></script>
+    <script>
+        // Executa ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const usuario = verificarAutenticacao();
+            if (usuario) {
+                document.getElementById('user-name').innerText = usuario.nome;
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

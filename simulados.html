@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulados | Admissão Fácil</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/simulados.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admissão<span>Fácil</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="dashboard.html">Painel</a></li>
+                <li><a href="simulados.html" class="active">Simulados</a></li>
+                <li><a href="tutor.html">Tutor IA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="simulados-container">
+        
+        <!-- 1. BARRA DE SELEÇÃO DE DISCIPLINAS -->
+        <section class="section-header">
+            <h2>Escolha a Disciplina</h2>
+            <p>Clique numa disciplina para ver os exames disponíveis:</p>
+            <div id="disciplinas-buttons" class="disciplinas-bar">
+                <!-- Os botões das disciplinas do aluno vão aparecer aqui -->
+            </div>
+        </section>
+
+        <!-- 2. GRELHA DOS 10 EXAMES DA DISCIPLINA SELECIONADA -->
+        <section class="exames-section">
+            <h3 id="disciplina-titulo">Selecione uma disciplina acima</h3>
+            <p class="subtitle-info">Alcança pelo menos <strong>15 valores</strong> para desbloquear o próximo exame!</p>
+
+            <div id="exames-grid" class="exames-grid">
+                <!-- Os cards dos exames 1 a 10 aparecem aqui -->
+            </div>
+        </section>
+
+        <!-- 3. MODAL DE EXECUÇÃO DO EXAME (INICIA ESCONDIDO) -->
+        <div id="modal-simulado" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-titulo">Exame</h3>
+                    <div class="timer-badge">⏱️ Tempo: <span id="timer">45:00</span></div>
+                </div>
+
+                <div class="modal-body">
+                    <div id="questoes-container"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="cancelarSimulado()">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="finalizarEValidarExame()">Entregar Exame</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/simulados.js"></script>
+</body>
+</html>

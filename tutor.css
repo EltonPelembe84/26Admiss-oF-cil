@@ -1,0 +1,122 @@
+/* Layout da Área do Tutor */
+.tutor-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tutor-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar de Tópicos */
+.quick-topics {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.quick-topics button {
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.quick-topics button:hover {
+    background: #e2e8f0;
+    color: #0d3b66;
+}
+
+/* Janela do Chat */
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tutor-avatar {
+    font-size: 2rem;
+    background: #fef08a;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+}
+
+.status {
+    font-size: 0.85rem;
+    color: #16a34a;
+}
+
+/* Lista de Mensagens */
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.message {
+    max-width: 80%;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.bot-message {
+    background: #f1f5f9;
+    color: #1e293b;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user-message {
+    background: #0d3b66;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+/* Form de Envio */
+.chat-input-box {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.chat-input-box input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.chat-input-box input:focus {
+    border-color: #0d3b66;
+}

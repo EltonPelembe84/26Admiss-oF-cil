@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor IA | Admissão Fácil</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/tutor.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admissão<span>Fácil</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="dashboard.html">Painel</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="tutor.html" class="active">Tutor IA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tutor-container">
+        
+        <!-- Sidebar de Tópicos Rápido -->
+        <aside class="tutor-sidebar card">
+            <h3>💡 Dúvidas Frequentes</h3>
+            <p class="subtitle">Clique para perguntar rapidamente:</p>
+            <ul class="quick-topics">
+                <li><button onclick="usarPerguntaRapida('Como resolver equações do 2º grau?')">📐 Equações do 2º Grau</button></li>
+                <li><button onclick="usarPerguntaRapida('Qual é a diferença entre regência verbal e nominal?')">📚 Regência Verbal vs Nominal</button></li>
+                <li><button onclick="usarPerguntaRapida('Resumo sobre a Fotossíntese e fases')">🧬 Processo de Fotossíntese</button></li>
+                <li><button onclick="usarPerguntaRapida('Leis de Newton aplicadas a exercícios de exames')">⚡ Leis de Newton</button></li>
+            </ul>
+        </aside>
+
+        <!-- Área Principal de Chat -->
+        <section class="chat-section card">
+            <div class="chat-header">
+                <div class="tutor-avatar">🤖</div>
+                <div>
+                    <h2>Tutor Inteligente</h2>
+                    <p class="status">🟢 Online — Pronto para ajudar nos estudos</p>
+                </div>
+            </div>
+
+            <!-- Janela de Mensagens -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    Olá! Sou o seu Tutor IA do <strong>Admissão Fácil</strong>. 🎓<br><br>
+                    Estou aqui para te ajudar com dúvidas sobre matérias, resoluções de questões ou dicas de estudo para os exames. Como posso ajudar hoje?
+                </div>
+            </div>
+
+            <!-- Caixas de Entrada de Texto -->
+            <form id="chat-form" class="chat-input-box" onsubmit="enviarMensagem(event)">
+                <input type="text" id="user-input" placeholder="Digite sua dúvida ou cole uma questão..." autocomplete="off">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Admissão Fácil — Projeto Jovem Criativo de Moçambique.</p>
+    </footer>
+
+    <script src="../js/tutor.js"></script>
+</body>
+</html>

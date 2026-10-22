@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Admissão Fácil</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admissão<span>Fácil</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        
+        <!-- TELA ÚNICA DE INÍCIO: APENAS LOGIN -->
+        <div id="card-login" class="card auth-card">
+            <h2>Entrar na Conta</h2>
+            <p class="subtitle">Insira os seus dados para aceder à plataforma</p>
+            
+            <form onsubmit="fazerLogin(event)">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required placeholder="exemplo@gmail.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="login-senha">Palavra-passe</label>
+                    <input type="password" id="login-senha" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+
+            <div class="divider"></div>
+            
+            <!-- PERGUNTA DIRETA CONFORME SOLICITADO -->
+            <p class="switch-form">
+                Ainda não tem uma conta? 
+                <a href="#" onclick="irParaPasso('registar-passo1'); return false;" class="link-destaque">Criar conta</a>
+            </p>
+        </div>
+
+        <!-- PASSO 1 DO REGISTO (Oculto de primeira) -->
+        <div id="card-reg-passo1" class="card auth-card hidden">
+            <span class="step-badge">Passo 1 de 2</span>
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Insira as suas credenciais de acesso</p>
+            
+            <form onsubmit="avancarParaPasso2(event)">
+                <div class="input-group">
+                    <label for="reg-nome">Nome Completo</label>
+                    <input type="text" id="reg-nome" required placeholder="Ex: Celso Tembe">
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" required placeholder="exemplo@gmail.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-senha">Palavra-passe</label>
+                    <input type="password" id="reg-senha" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Próximo: Personalizar Estudo ➔</button>
+            </form>
+
+            <div class="divider"></div>
+            <p class="switch-form">
+                Já tem uma conta? 
+                <a href="#" onclick="irParaPasso('login'); return false;" class="link-destaque">Voltar ao Login</a>
+            </p>
+        </div>
+
+        <!-- PASSO 2 DO REGISTO: PERSONALIZAÇÃO (Oculto de primeira) -->
+        <div id="card-reg-passo2" class="card auth-card hidden">
+            <span class="step-badge">Passo 2 de 2</span>
+            <h2>Personaliza o teu Foco 🎯</h2>
+            <p class="subtitle">Diz-nos onde queres chegar para adaptarmos os exames para ti.</p>
+            
+            <form onsubmit="finalizarRegisto(event)">
+                <div class="input-group">
+                    <label for="reg-universidade">Universidade Pretendida</label>
+                    <select id="reg-universidade" required>
+                        <option value="">Selecione a universidade...</option>
+                        <option value="UEM">UEM - Universidade Eduardo Mondlane</option>
+                        <option value="UP">UP - Universidade Pedagógica</option>
+                        <option value="Unizambeze">UniZambeze</option>
+                        <option value="UniLúrio">UniLúrio</option>
+                        <option value="ISRI">ISRI / ISRI-IR</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-curso">Curso Pretendido</label>
+                    <input type="text" id="reg-curso" required placeholder="Ex: Medicina, Direito, Engenharia">
+                </div>
+
+                <div class="input-group">
+                    <label>Disciplinas para Exame (Selecione pelo menos 1):</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="disciplinas" value="Português"> Português</label>
+                        <label><input type="checkbox" name="disciplinas" value="Matemática"> Matemática</label>
+                        <label><input type="checkbox" name="disciplinas" value="Biologia"> Biologia</label>
+                        <label><input type="checkbox" name="disciplinas" value="Química"> Química</label>
+                        <label><input type="checkbox" name="disciplinas" value="Física"> Física</label>
+                        <label><input type="checkbox" name="disciplinas" value="História"> História</label>
+                        <label><input type="checkbox" name="disciplinas" value="Geografia"> Geografia</label>
+                        <label><input type="checkbox" name="disciplinas" value="Inglês"> Inglês</label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn btn-secondary" onclick="irParaPasso('registar-passo1')">⬅ Voltar</button>
+                    <button type="submit" class="btn btn-primary">Concluir e Começar 🔥</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Admissão Fácil — Projeto Jovem Criativo de Moçambique.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

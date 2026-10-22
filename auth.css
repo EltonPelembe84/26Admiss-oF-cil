@@ -1,0 +1,158 @@
+.auth-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h2 {
+    color: #0d3b66;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #0d3b66;
+}
+
+.w-100 {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.switch-form a {
+    color: #0d3b66;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+.step-badge {
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    background: #f8fafc;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.checkbox-grid label {
+    font-weight: normal;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.btn-secondary {
+    background-color: #94a3b8;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+select {
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+}
+
+/* Esconder elementos com a classe hidden */
+.hidden {
+    display: none !important;
+}
+
+/* Estilo para a pergunta e link de troca */
+.switch-form {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.link-destaque {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.link-destaque:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1.5rem 0 1rem 0;
+}
